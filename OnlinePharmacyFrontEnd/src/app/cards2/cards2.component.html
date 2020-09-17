@@ -1,0 +1,32 @@
+<br><br>
+<div class="row" style="margin-left:5px;">
+<h4>{{pagetitle}}</h4></div>
+<div class="row" style="margin-left:5px;"><p>{{pagedesc}}</p>
+</div>
+<a class="nav-item nav-link" routerLink="/showdoctors">
+
+<div class="row">
+
+    <div class="col-md-3" *ngFor="let service of services;let i=index">
+     
+        <div class="card" style="width: 18rem; height:22rem;">
+        
+           <img src="assets/images/{{service.imgname}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{service.servicename}}<br>
+                   <span class="desc">{{service.desc}}<br>
+                   </span>
+                   <span class="disc" >{{service.disc}}</span><br>
+                   </h5>
+                </div>
+            
+            <a class="nav-item nav-link" routerLink="/showdoctors">{{service.link}}
+            </a><router-outlet></router-outlet>
+
+        </div>
+    </div>
+</div>
+</a>
+<router-outlet></router-outlet>
+<hr>
+<app-articles></app-articles>

@@ -1,0 +1,119 @@
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-6 mx-auto mt-5">
+        <div class="card mr-5 ml-5">
+            <div class="card-header">
+                Nerve Signup
+              </div>
+              <div class="card-body center">
+                  <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+                    
+                  <div class="row mt-2" *ngIf="signinsuccess;">
+                      <div class="col-md-12">
+                          
+                         <div class="alert alert-danger alert-dismissible fade show" role="alert" >
+                          <strong>Login Failed!</strong> Invalid username or password
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div> 							
+                            							
+
+                    </div>
+                  </div>  
+                  
+                  <div class="row mt-2">
+                    <div class="col-md-6">
+                       <select name="dropdownUser" id="" class="form-control" (change)="onChange($event.target.value)" [(ngModel)]="doctorForm.usertype">
+                            <option value="Doctor">Doctor</option>
+                            <option value="Patient">Patient</option>
+                       </select> 		
+                    </div>
+                </div>
+
+                  <div class="row mt-2">
+                      <div class="col-md-4">
+                         <input type="text" name="txtFirstName" placeholder="First Name" class="form-control" required [(ngModel)]="doctorForm.fname"> 		
+                      </div>
+                      <div class="col-md-4">
+                        <input type="text" name="txMiddleName" placeholder="Middle Name" class="form-control" required [(ngModel)]="doctorForm.mname"> 		
+                     </div>
+                     <div class="col-md-4">
+                        <input type="text" name="txtLastName" placeholder="Last Name" class="form-control" required [(ngModel)]="doctorForm.lname"> 		
+                     </div>                                           
+                  </div>
+
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                        <label for="" class="mr-2">Select Gender</label>
+                        <input type="radio" name="gender" value="Male" [(ngModel)]="doctorForm.gender"> Male 
+                        <input type="radio" name="gender" value="Female" [(ngModel)]="doctorForm.gender"> Female 
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                           <select name="dropdownplace" class="form-control" [(ngModel)]="doctorForm.fkplaceid">
+                               <option *ngFor="let obj of studrecords" value="{{obj.placeid}}">{{obj.placename}}</option>
+                           </select>
+                        </div>
+                    </div> 
+
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                           <input type="email" name="txtEmail" placeholder="Email Id" class="form-control" required [(ngModel)]="doctorForm.emailid">
+                        </div>
+                    </div>  
+                    
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                           <input type="text" name="txtContactNo" placeholder="Contact No" class="form-control" required [(ngModel)]="doctorForm.contactno">
+                        </div>
+                    </div>  
+
+                    <div class="row mt-2" *ngIf="user=='Doctor'">
+                        <div class="col-md-6">
+                           <select name="dropdownQualification" class="form-control" [(ngModel)]="doctorForm.fkqualificationid">
+                               <option *ngFor="let obj of qualificationrecords" value="{{obj.qualificationid}}">{{obj.qualification}}</option>
+                           </select>
+                        </div>
+                    </div> 
+
+                   <div class="row mt-2" *ngIf="user=='Doctor'">
+                        <div class="col-md-6">
+                           <select name="dropdownSpeciality" class="form-control" [(ngModel)]="doctorForm.fkspecialityid">
+                               <option *ngFor="let obj of specialityrecords" value="{{obj.specialityid}}">{{obj.speciality}}</option>
+                           </select>
+                        </div>
+                    </div> 
+
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                           <input type="text" name="txtUsername" placeholder="Username" class="form-control" required [(ngModel)]="doctorForm.username">
+                        </div>
+                    </div>  
+
+                  <div class="row mt-2">
+                      <div class="col-md-12">
+                         <input type="password" name="txtPassword" placeholder="Password" class="form-control" required [(ngModel)]="doctorForm.password">
+                      </div>
+                  </div>  
+
+                  <div class="row mt-2">
+                      <div class="col-md-12">
+                         <input type="submit" name="btnLogin" value="Sign Up" class="btn btn-primary float-right">
+                      </div>
+                  </div>  
+
+                  </form>	 
+               
+              </div>
+        </div>
+        </div>
+    </div>
+    </div>
+                      
+  
+  
+

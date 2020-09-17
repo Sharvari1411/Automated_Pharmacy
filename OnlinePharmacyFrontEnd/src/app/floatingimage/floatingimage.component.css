@@ -1,0 +1,16 @@
+.an
+{
+    padding:10px 10px 10px 10px;
+    float:right;
+    margin:10px 10px 0px 10px;
+    background-color:#3094FA;
+    color:white;
+    font:bold 20px calibri; 
+}
+
+#prescrib
+{
+    width:250px;
+    height:300px;
+    border:1px solid;
+}

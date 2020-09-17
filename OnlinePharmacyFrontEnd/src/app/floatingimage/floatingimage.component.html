@@ -1,0 +1,78 @@
+<div class="row">
+  <div class="col-md-4">
+      <input type="text" placeholder="Search for health products, medicines and more" class="form-control m-3">
+  </div>
+
+  <div class="col-md-4">
+      <input type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#exampleModal" value="Upload Prescription">
+  </div>
+  <div class="col-md-4">
+      <a href="#" class="an" style="margin-right:50px;">VIEW CART</a>
+  </div>
+
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Upload Prescription</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <!-- <input type="file" id="imgup"  (change)="onFileSelected($event)" > -->
+        <div class="input-group mb-3">
+
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="imgup"  (change)="onFileSelected($event)" name="document">
+            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+          </div>
+        </div>
+        
+        <img id="prescrib" src="" alt="">
+        <br><br>
+
+        <!-- <div>{{}}</div> -->
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <input type="button" value="Upload" class="btn btn-success" (click)="onUpload()">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/images/header1.jpg" class="d-block w-100" alt="...">
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/images/header2.jpg" class="d-block w-100" alt="...">
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/images/header3.jpg" class="d-block w-100" alt="...">
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/images/header4.jpg" class="d-block w-100" alt="...">
+      </div>            
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+<app-card1></app-card1>

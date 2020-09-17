@@ -1,0 +1,27 @@
+
+/* Style the accordion panel. Note: hidden by default */
+
+
+#btn1
+{
+    margin-left: 50px;
+  position: absolute;
+
+  
+}
+#a
+{
+    color: green;
+    margin-left: 70px;
+  position: absolute;
+}
+.doct
+{
+    margin-left: 70px;
+}
+h4{
+    color: rgb(26, 83, 255);
+}
+p{
+    color: slategray;
+}

@@ -1,0 +1,49 @@
+<!-- <div *ngFor="let obj of docrecords">
+  <div class="row">
+    <div class="col-md-2"></div>
+
+    <div class="col-md-4">
+
+      <div class="name">{{obj.fullname}}</div>
+
+      <div class="info"> 
+        {{obj.speciality}}<br>
+        {{obj.qualification}}<br>
+        {{obj.experience}} years of experience
+      </div>
+
+      <div class="place"> {{obj.placename}}</div>
+
+
+    </div>
+
+    <div class="col-md-4">
+      <button type="button" class="btn btn-outline-primary btn-sm active ">Book Appointment
+        <div>No Booking Fee</div></button>
+    </div>
+
+  </div>
+  <hr>
+</div> -->
+
+<input type="button" value="Show Doctors" (click)="getDoctors()" />
+
+<div class="doct">
+   <div *ngFor="let r of doctorArray">
+
+      <h4 *ngIf="r.speciality==queryParam">{{ r.fullname }}</h4>
+      <p *ngIf="r.speciality==queryParam">{{ r.speciality }}</p>
+      <h6 *ngIf="r.speciality==queryParam">{{ r.placename }}</h6>
+      <p *ngIf="r.speciality==queryParam">{{ r.contactno }}<button type="button" class="btn btn-primary" id="btn1">Book Appointment</button></p>
+      <p *ngIf="r.speciality==queryParam">{{ r.qualification }}</p>
+      <p *ngIf="r.speciality==queryParam">{{ r.experience }} experience overall<br><br><br> </p>
+      
+      
+  
+
+    </div>
+  </div>
+
+
+
+{{ doctorsArray }}
