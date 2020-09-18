@@ -14,7 +14,7 @@ def getQualification(request):
     x=db.DbConfig()
     x.connectMySQL()
     cur=x.conn.cursor()
-    cur.execute("SELECT qualificationid,qualification FROM viewQualification")
+    cur.execute("SELECT qualificationid,qualification FROM qualifications")
     
 
     data=dict()
@@ -37,12 +37,13 @@ def saveDoctor(request):
     cur=x.conn.cursor()  
 
     if json_data['usertype'] == "Doctor": 
-        record=[json_data['fname'],json_data['mname'],json_data['lname'],json_data['gender'],json_data['fkplaceid'],json_data['fkqualificationid'],json_data['fkspecialityid'],json_data['username'],json_data['password'],json_data['emailid'],json_data['contactno'],'enrolled']
+        record=[json_data['fname'],json_data['mname'],json_data['lname'],json_data['gender'],json_data['fkplaceid'],json_data['fkqualificationid'],json_data['fkspecialityid'],json_data['username'],json_data['password'],json_data['emailid'],json_data['contactno']]
         cur.callproc("spInsertDoctor",record)    
         x.conn.commit()   
     else:
-        insertStatement = "INSERT INTO USERS(FNAME,MNAME,LNAME,GENDER,USERNAME,PASSWORD,EMAILID,CONTACTNO,FKPLACEDID) VALUES (%d,%s,%s,%s,%s,%s,%s,%s,%s,%d);"%(json_data['fname'],json_data['mname'],json_data['lname'],json_data['gender'],json_data['username'],json_data['password'],json_data['emailid'],json_data['contactno'],json_data['fkplaceid'])   
-        cur.execute(insertStatement) 
+        records=[json_data['fname'],json_data['mname'],json_data['lname'],json_data['gender'],json_data['username'],json_data['password'],json_data['emailid'],json_data['contactno'],json_data['fkplaceid']]
+        cur.callproc("spInsertUser",records)    
+
         x.conn.commit()     
 
     return JsonResponse({'status':'success'})
@@ -70,12 +71,12 @@ def getDoctorData(request):
     x=db.DbConfig()
     x.connectMySQL()
     cur=x.conn.cursor()
-    cur.execute("SELECT doctorid, fname, mname, lname, gender, place_name, qualification, speciality, username, password, emailid, contactno, status from viewDoctorData")
+    cur.execute("SELECT fname, mname, lname, gender, place_name, qualification, speciality, username, password, emailid, contactno, status from viewdoctors")
     
     data=dict()
     i=1
-    for doctorid,fname,mname,lname,gender,place_name,qualification,speciality,username,password,emailid,contactno,status in cur.fetchall():
-        data[i]={'doctorid':doctorid,'fname':fname,'mname':mname,'lname':lname,'gender':gender,'place_name':place_name,'qualification':qualification,'speciality':speciality,'username':username,'password':password,'emailid':emailid,'contactno':contactno,'status':status}
+    for fname,mname,lname,gender,placename,qualification,speciality,username,password,emailid,contactno in cur.fetchall():
+        data[i]={'fname':fname,'mname':mname,'lname':lname,'gender':gender,'placename':placename,'qualification':qualification,'speciality':speciality,'username':username,'password':password,'emailid':emailid,'contactno':contactno}
         i+=1
 
     print(data)

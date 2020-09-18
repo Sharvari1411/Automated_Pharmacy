@@ -13,7 +13,7 @@ def getSpeciality(request):
     x=db.DbConfig()
     x.connectMySQL()
     cur=x.conn.cursor()
-    cur.execute("SELECT specialityid,speciality FROM viewSpeciality")
+    cur.execute("SELECT specialityid,speciality FROM specialities")
     
     data=dict()
     i=1

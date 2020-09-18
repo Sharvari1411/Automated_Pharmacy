@@ -14,7 +14,7 @@ def getPlace(request):
     x=db.DbConfig()
     x.connectMySQL()
     cur=x.conn.cursor()
-    cur.execute("SELECT placeid,place_name FROM viewplace")
+    cur.execute("SELECT placeid,placename FROM place")
     
 
     data=dict()
