@@ -18,6 +18,7 @@ const routes:Routes = [
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'login/patientprofile',component:PatientComponent},
+  //{path:'doctorprofile',component:DoctorComponent},
   {path:'showdoctors',component:ShowdoctorsComponent},
   {path:'showdoctors/:queryParam',component:ShowdoctorsComponent},
   {path:'showarticles',component:ShowarticlesComponent},

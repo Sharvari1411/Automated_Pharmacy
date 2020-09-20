@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
           rec.data[i].Password,
           rec.data[i].Emailid,
           rec.data[i].Contactno,
-          rec.data[i].FkPlaceDId));
+          rec.data[i].FkPlaceId));
 
 
       }

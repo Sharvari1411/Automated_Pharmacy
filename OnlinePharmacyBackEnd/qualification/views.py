@@ -54,12 +54,12 @@ def getAllUsers(request):
     x=db.DbConfig()
     x.connectMySQL()
     cur=x.conn.cursor()
-    cur.execute("SELECT UserId, Fname, Mname, Lname, Gender, Username, Password, Emailid, Contactno, FkPlaceDId FROM Users")
+    cur.execute("SELECT UserId, Fname, Mname, Lname, Gender, Username, Password, Emailid, Contactno, FkPlaceId FROM Users")
     
     data=dict()
     i=1
-    for UserId,Fname,Mname,Lname,Gender,Username,Password,Emailid,Contactno,FkPlaceDId in cur.fetchall():
-        data[i]={'UserId':UserId,'Fname':Fname,'Mname':Mname,'Lname':Lname,'Gender':Gender,'Username':Username,'Password':Password,'Emailid':Emailid,'Contactno':Contactno,'FkPlaceDId':FkPlaceDId}
+    for UserId,Fname,Mname,Lname,Gender,Username,Password,Emailid,Contactno,FkPlaceId in cur.fetchall():
+        data[i]={'UserId':UserId,'Fname':Fname,'Mname':Mname,'Lname':Lname,'Gender':Gender,'Username':Username,'Password':Password,'Emailid':Emailid,'Contactno':Contactno,'FkPlaceId':FkPlaceId}
         i+=1
 
     print(data)
@@ -71,12 +71,12 @@ def getDoctorData(request):
     x=db.DbConfig()
     x.connectMySQL()
     cur=x.conn.cursor()
-    cur.execute("SELECT fname, mname, lname, gender, place_name, qualification, speciality, username, password, emailid, contactno, status from viewdoctors")
+    cur.execute("SELECT fname, mname, lname, gender, placename, qualification, speciality, username, password,contactno from viewdoctors")
     
     data=dict()
     i=1
-    for fname,mname,lname,gender,placename,qualification,speciality,username,password,emailid,contactno in cur.fetchall():
-        data[i]={'fname':fname,'mname':mname,'lname':lname,'gender':gender,'placename':placename,'qualification':qualification,'speciality':speciality,'username':username,'password':password,'emailid':emailid,'contactno':contactno}
+    for fname,mname,lname,gender,placename,qualification,speciality,username,password,contactno in cur.fetchall():
+        data[i]={'fname':fname,'mname':mname,'lname':lname,'gender':gender,'placename':placename,'qualification':qualification,'speciality':speciality,'username':username,'password':password,'contactno':contactno}
         i+=1
 
     print(data)

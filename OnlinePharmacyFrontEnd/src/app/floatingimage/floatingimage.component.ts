@@ -8,10 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./floatingimage.component.css']
 })
 export class FloatingimageComponent implements OnInit {
+  
+  data1:string;
+    
 
   selectedFile:File = null;
 
   constructor(private http:HttpClient,private router:Router) {
+
 
   }
 
@@ -38,6 +42,8 @@ export class FloatingimageComponent implements OnInit {
       else if(event.type === HttpEventType.Response)
       {
         console.log(event);
+        this.data1=event.body.data;
+        
       }
       });
   }
@@ -48,6 +54,7 @@ export class FloatingimageComponent implements OnInit {
     this.router.navigate([`${pagename}`]);
   }
   ngOnInit() {
+
   }
 
 }
