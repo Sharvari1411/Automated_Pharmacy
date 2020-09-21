@@ -1,0 +1,69 @@
+<!-- <a routerLink="/Products/SkincareProducts"><button>Skin care products</button></a>
+<a routerLink="/Products/FamilycareProducts"><button>family care products</button></a>
+<a routerLink="/Products/FitnesscareProducts"><button>Fitness care products</button></a>
+<a routerLink="/Products/PaincareProducts"><button>Pain care products</button></a>
+<a routerLink="/Products/WeightcareProducts"><button>Weight care products</button></a> -->
+<div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card" style="width: 23rem;height:22rem">
+            <img style="height:218px" src="assets/images/Skin_care.png" class="card-img-top" alt="...">
+             <div class="card-body">
+              <h5 class="card-title">Skin care products</h5>
+          <a routerLink="/Products/SkincareProducts">
+            <button style="width:180px;font-size: 19px;" class="btn btn-success">
+              See the details</button></a> <router-outlet></router-outlet> 
+              
+            </div>
+           
+              </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="width:23rem; height:22rem">
+            <img style="height:218px" src="assets/images/Family_care.png" class="card-img-top" alt="...">
+             <div class="card-body">
+              <h5 class="card-title">Family care products</h5>
+             <a routerLink="/Products/FamilycareProducts"> 
+              <button style="width:180px;font-size: 19px;" class="btn btn-success" >See the details
+              </button></a> <router-outlet></router-outlet> 
+              </div>
+              </div>
+      </div> 
+      <div class="col-md-4">
+        <div class="card" style="width:23rem; height:22rem">
+            <img style="height:218px"src="assets/images/Fitness_care.png" class="card-img-top" alt="...">
+             <div class="card-body">
+              <h5 class="card-title">Fitness care products</h5>
+              <a routerLink="/Products/FitnesscareProducts"> <button style="width:180px;font-size: 19px;" class="btn btn-success">
+                See the details</button></a><router-outlet></router-outlet> 
+              </div>
+              </div>
+      </div> 
+      <div class="col-md-4">
+        <div class="card" style="width:23rem; height:22rem;margin-top: 25px;">
+            <img style="height:218px"src="assets/images/Pain_care.png" class="card-img-top" alt="...">
+             <div class="card-body">
+              <h5 class="card-title">Pain care products </h5>
+              <a routerLink="/Products/PaincareProducts"> 
+                <button style="width:180px;font-size: 19px;" class="btn btn-success">
+                  See the details</button></a><router-outlet></router-outlet> 
+              </div>
+              </div>
+      </div> 
+      <div class="col-md-4">
+        <div class="card" style="width:23rem; height:22rem;margin-top: 25px;">
+            <img style="height:218px"src="assets/images/Weight_care.png" class="card-img-top" alt="...">
+             <div class="card-body">
+              <h5 class="card-title">Weight care products</h5>
+              <a routerLink="/Products/WeightcareProducts"> 
+                <button style="width:180px;font-size: 19px;" class="btn btn-success">See the details</button>
+              </a><router-outlet></router-outlet> 
+              </div>
+              </div>
+      </div> 
+     
+        
+    </div>
+   
+</div> 
+

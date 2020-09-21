@@ -1,17 +1,17 @@
 <div class="row">
- <a class="nav-item nav-link" routerLink="/showarticles">
-  <div class="col-md-6 float-left" >
+  <div class="col-md-4 float-left" >
         <div class="fix1"><h1>Read Top articles from health experts</h1>
         </div>
         <div class="fix2"><h6>Health articles that keep you informed about good health practices and achieve your goals.</h6>
         </div>
-        <div class="fix4"> <button class="btn-primary"><b>See all articles</b>
-        </button></div>
-        
+        <div class="fix4"> <a class="nav-item nav-link" routerLink="/all"><button class="btn-primary"><b>See all articles</b>
+        </button>
+      </a><router-outlet></router-outlet></div>
   </div>
 
-
+  <a class="nav-item nav-link" routerLink="/fruitarticle">
   <div class="col-md-3 float-right">
+      
         <div class="card" style="width:18rem;height:22rem;">
         
           <img src="assets/images/Fruits.jpeg" class="card-img-top" alt="...">
@@ -21,7 +21,10 @@
           </div>
         </div>
   </div>
+</a><router-outlet></router-outlet>
+<a class="nav-item nav-link" routerLink="/climatearticle">
   <div class="col-md-3 float-right">  
+      
         <div class="card"style="width:18rem;height:22rem;">
   
           <img src="assets/images/Climate.jpg" class="card-img-top" alt="...">
@@ -30,8 +33,9 @@
               <p class="card-text">Dr.Snehal Singh</p>
           </div>
         </div>
+      
   </div>
-        </a><router-outlet></router-outlet>
+</a><router-outlet></router-outlet>
 </div><hr>
         <br>
         <br>

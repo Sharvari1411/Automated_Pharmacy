@@ -1,0 +1,41 @@
+.fix1{
+    height:250px;
+    width:450px;
+    margin-left:150px;
+    
+}
+.fix2{
+    height:250px;
+    width:450px;
+    margin-left:150px;
+    margin-top: -150px;
+}
+.btn-primary{
+    height:50px;
+    margin-left:150px;
+    width:200px;
+    font-size:20px;
+    font-family:sans-serif;
+    border-radius:5px;
+   
+    
+}
+.fix4{
+    margin-top: -180px;
+}
+.xcard{
+display:inline-block;
+
+  }
+  .footer{
+    background-color:black;
+    color:white;
+    border-color:#f51010;
+    border:1px solid transparent;
+    min-height: 29px;   
+    text-align: center;
+    padding-top: 10px;
+    font-family: sans-serif;
+    font-size:20px;
+    margin-top:20px;
+}
