@@ -17,7 +17,6 @@ import { ArticlesComponent } from './articles/articles.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { Card1Component } from './card1/card1.component';
 import { ShowdoctorsComponent } from './showdoctors/showdoctors.component';
-import { ShowarticlesComponent } from './showarticles/showarticles.component';
 import { ShowdiagnosticsComponent } from './showdiagnostics/showdiagnostics.component';
 import { Cards1Component } from './showdiagnostics/cards1/cards1.component';
 import { ShowtestsComponent } from './showdiagnostics/showtests/showtests.component';
@@ -66,6 +65,8 @@ import { GNCComponent } from './gnc/gnc.component';
 import { FruitarticleComponent } from './fruitarticle/fruitarticle.component';
 import { ClimatearticleComponent } from './climatearticle/climatearticle.component';
 import { TedibarComponent } from './tedibar/tedibar.component';
+import { SearchComponent } from './search/search.component';
+
 
 
 
@@ -85,7 +86,6 @@ import { TedibarComponent } from './tedibar/tedibar.component';
     FeedbackComponent,
     Card1Component,
     ShowdoctorsComponent,
-    ShowarticlesComponent,
     ShowdiagnosticsComponent,
     Cards1Component,
     ShowtestsComponent,
@@ -133,7 +133,9 @@ import { TedibarComponent } from './tedibar/tedibar.component';
     GNCComponent,
     FruitarticleComponent,
     ClimatearticleComponent,
-    TedibarComponent
+    TedibarComponent,
+    SearchComponent
+    
   ],
   imports: [
     BrowserModule,

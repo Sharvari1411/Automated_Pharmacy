@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Doctor } from './doctor';
+import { Router, NavigationExtras } from '@angular/router';
 import { User } from './user';
 
 @Component({
@@ -25,6 +26,7 @@ export class SignupComponent implements OnInit {
 
 
   public signinsuccess:boolean=false;
+  router:Router; 
 
 
   constructor(http:HttpClient) {
@@ -41,12 +43,16 @@ export class SignupComponent implements OnInit {
   onSubmit()
   {
     console.log(this.doctorForm);
+    
 
       return this.http.post<any>('http://127.0.0.1:8000/backend/savedoctor/',this.doctorForm,{responseType:"json"}).
-      subscribe(data=> console.log("Success",data),
-                error=> console.log("Error!",error)
-        );
-  }
+      subscribe(data=> alert("Signup done successfully"),
+                error=> console.log("Error",error)
+
+                 )
+           
+    
+                }
   
   getPlace()
   {
@@ -98,9 +104,7 @@ export class SignupComponent implements OnInit {
     this.user=val;
   }
 
-  public checkSignIn(){
-    
-  }
+  
 
 }
 

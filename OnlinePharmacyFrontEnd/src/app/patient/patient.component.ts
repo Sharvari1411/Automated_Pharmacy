@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { LoginComponent, User } from '../login/login.component';
+import { info } from 'console';
 
 @Component({
   selector: 'app-patient',
@@ -11,8 +12,11 @@ import { LoginComponent, User } from '../login/login.component';
 export class PatientComponent implements OnInit {
 
   public info:any;
+  public data:any;
+
 
   constructor(public router:Router,http: HttpClient,public rout:ActivatedRoute) { 
+    
 
   }
 
@@ -21,6 +25,8 @@ export class PatientComponent implements OnInit {
       this.info=x;
     }); 
     console.log(this.info);
+    
   }
+  
 
 }

@@ -88,7 +88,7 @@ export class LoginComponent implements OnInit {
 
   linkLink() {
     if (this.usertype == "Doctor") {
-      this.router.navigateByUrl('/doctorprofile');
+      this.router.navigateByUrl('/prescribe');
     }
     else if (this.usertype == "Patient") {
       let data=JSON.stringify(this.patientobj);
@@ -99,7 +99,7 @@ export class LoginComponent implements OnInit {
             patientdata: data
         }
     }      
-      this.router.navigate(['/login/patientprofile'], navigationExtras)
+      this.router.navigate(['/prescribe'], navigationExtras)
     }
   }
 

@@ -1,0 +1,21 @@
+
+<div class="inputstyle"><input type="text" placeholder="Search medicines" [(ngModel)]="fullname" > </div>
+<button (click)="Search()" class="btn btn-primary">Click</button>
+<br/><br/>
+<table class="content" >
+<thead>
+    <tr>
+        <th>Medicine Names</th>
+        
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let obj of medicine" >
+    
+       <a href="https://www.drugs.com/" class="anchor"><td> {{obj.fullname}} </td><hr></a> 
+        
+
+   
+</tr>
+</tbody>
+</table>

@@ -6,7 +6,6 @@ import { SignupComponent } from './signup/signup.component';
 import { PatientComponent } from './patient/patient.component';
 import {CardsComponent} from './cards/cards.component';
 import { ShowdoctorsComponent } from './showdoctors/showdoctors.component';
-import { ShowarticlesComponent } from './showarticles/showarticles.component';
 import {ShowdiagnosticsComponent} from './showdiagnostics/showdiagnostics.component';
 import {ShowtestsComponent} from './showdiagnostics/showtests/showtests.component';
 import { AllArtComponent } from './all-art/all-art.component';
@@ -49,6 +48,8 @@ import { GNCComponent } from './gnc/gnc.component';
 import { TedibarComponent } from './tedibar/tedibar.component';
 import { FruitarticleComponent } from './fruitarticle/fruitarticle.component';
 import { ClimatearticleComponent } from './climatearticle/climatearticle.component';
+import { SearchComponent } from './search/search.component';
+
 
 
 
@@ -62,7 +63,6 @@ const routes:Routes = [
   //{path:'doctorprofile',component:DoctorComponent},
   {path:'showdoctors',component:ShowdoctorsComponent},
   {path:'showdoctors/:queryParam',component:ShowdoctorsComponent},
-  {path:'showarticles',component:ShowarticlesComponent},
   {path:'showdiagnostics',component:ShowdiagnosticsComponent},
   {path:'showtests',component:ShowtestsComponent},
   {path:'**',redirectTo:'prescibe'},
@@ -105,7 +105,8 @@ const routes:Routes = [
    {path:"Products/WeightcareProducts/Cureveda",component:CurevedaComponent,pathMatch:"full"},
    {path:"Products/WeightcareProducts/WeightNo",component:WeightNoComponent,pathMatch:"full"},
    {path:"Products/WeightcareProducts/OZiva",component:OzivaComponent,pathMatch:"full"},
-   {path:"Products/WeightcareProducts/GNC",component:GNCComponent,pathMatch:"full"}
+   {path:"Products/WeightcareProducts/GNC",component:GNCComponent,pathMatch:"full"},
+   {path:"searchmedicine",component:SearchComponent,pathMatch:"full"}
   
 ]
 
